@@ -1,0 +1,86 @@
+.slideshow {
+  position: relative;
+  top: 60px;
+
+  &__prev,
+  &__next {
+    cursor: pointer;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 32px;
+    color: white;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    top: 50%;
+    margin-top: -30px;
+    z-index: 80;
+  }
+
+  &__prev {
+    left: 40px;
+  }
+
+  &__next {
+    right: 40px;
+  }
+
+  .slide-desc {
+    left: 50px;
+  }
+
+  #left-button {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+  }
+  #right-button {
+    position: absolute;
+    top: 350px;
+    right: 10px;
+    color: grey;
+    background-color: #bfbfbf;
+  }
+
+  .color-filter {
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    position: absolute;
+    z-index: 40;
+    width: 100%;
+    top: 550px;
+    height: 150px;
+  }
+
+  img {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    z-index: 0;
+  }
+  #logo {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 10;
+  }
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}
